@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -26,10 +27,13 @@ public class DataSourceDemoBootStrap implements CommandLineRunner {
     }
     @Autowired
     private DataSource dataSource;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public void run(String... args) throws Exception {
         showConnection();
+        showData();
     }
 
     private void showConnection() throws SQLException {
@@ -37,5 +41,9 @@ public class DataSourceDemoBootStrap implements CommandLineRunner {
         Connection connection = dataSource.getConnection();
         log.info("user log:" + connection.toString());
         connection.close();
+    }
+
+    private void showData(){
+        jdbcTemplate.queryForList("SELECT * FROM FOO").forEach(row-> log.info(row.toString()));
     }
 }
