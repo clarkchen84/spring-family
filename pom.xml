@@ -13,6 +13,7 @@
         <module>spring-boot-single-jdbc</module>
         <module>spring-boot-multy-datasource-jdbc</module>
         <module>druid-datasource</module>
+        <module>spring-boot-jdbctemplate</module>
     </modules>
     <packaging>pom</packaging>
 
