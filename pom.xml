@@ -10,6 +10,10 @@
     <modules>
         <module>spring-boot-jdbc</module>
         <module>spring-jdbc</module>
+        <module>spring-boot-single-jdbc</module>
+        <module>spring-boot-multy-datasource-jdbc</module>
+        <module>druid-datasource</module>
+        <module>spring-boot-jdbctemplate</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -31,7 +35,11 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.16</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.21</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
