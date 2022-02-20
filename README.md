@@ -456,4 +456,10 @@
        }
    ```
 
-   
+#### sql error code
+
+* 可以在 classpath 下覆盖sql-error-code.xml文件实现，ErrorCode 和exception的重新绑定
+
+* spring通过SQLErrorCodeSQLExceptionTranslater解析错误码
+
+  
