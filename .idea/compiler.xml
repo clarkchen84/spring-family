@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-jdbctemplate" />
-        <module name="spring-boot-jdbc" />
+        <module name="annotation-transaction" />
         <module name="spring-jdbc" />
+        <module name="druid-datasource" />
+        <module name="programing-transaction-demo" />
+        <module name="spring-boot-jdbc" />
         <module name="spring-boot-multy-datasource-jdbc" />
         <module name="spring-boot-single-jdbc" />
-        <module name="druid-datasource" />
       </profile>
     </annotationProcessing>
   </component>
